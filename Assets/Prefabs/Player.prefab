@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2881919298834477530}
   - component: {fileID: 2881919298834477533}
+  - component: {fileID: 7024471777225959794}
+  - component: {fileID: 5837356239812111997}
   - component: {fileID: 2881919298834477532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,6 +85,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &7024471777225959794
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881919298834477535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.98, y: 0.75}
+    newSize: {x: 0.91, y: 0.91}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.024562087, y: 0.375}
+      - {x: -0.040018305, y: 0.375}
+      - {x: -0.08259886, y: 0.22471333}
+      - {x: -0.3755302, y: -0.10878822}
+      - {x: -0.4669679, y: -0.21320301}
+      - {x: -0.49454376, y: -0.28319305}
+      - {x: -0.19598961, y: -0.2671876}
+      - {x: 0.19401039, y: -0.27317715}
+      - {x: 0.46728104, y: -0.27956218}
+      - {x: 0.48091236, y: -0.23406915}
+      - {x: 0.09609354, y: 0.21499999}
+--- !u!50 &5837356239812111997
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2881919298834477535}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &2881919298834477532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +156,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   padding: 0.5
+  health: 200
+  deathSound: {fileID: 8300000, guid: 690a9bb0d916ed7489414ffe65f260e0, type: 3}
+  deathSoundVolume: 1
+  shootSound: {fileID: 8300000, guid: 8b4a9abe6d32f554ebffe5503e256df0, type: 3}
+  shootSoundVolume: 0.1
+  laserPrefab: {fileID: 7363975524822662983, guid: 0dd955f880c3abe40b1701ac77faa2bf, type: 3}
+  projectileSpeed: 20
+  projectileFiringPeriod: 0.1
